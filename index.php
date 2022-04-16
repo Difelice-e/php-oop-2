@@ -1,6 +1,7 @@
 <?php 
 
 require_once __DIR__. '/product.php';
+require_once __DIR__. '/user.php';
 
 $prodotto1 = new product(
     'Monge',
@@ -23,7 +24,17 @@ $prodotto3 = new product(
     'Guinzaglio a tema Star Wars',
     11.95
 );
+
+$user1 = new user(
+    'Fabrizio',
+    'Tarducci',
+    'doppiaeffe@gmail.com',
+    '1976-asdf',
+    'Via del quirinale 12',
+    '3887203560'
+);
   
 var_dump($prodotto1, $prodotto2, $prodotto3);
+var_dump($user1)
 
 ?>
