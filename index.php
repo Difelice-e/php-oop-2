@@ -46,8 +46,8 @@ $guest1 = new guest(
 
 $cart1 = new cart(
     [],
-    '',
-    ''
+    0,
+    0
 );
 
 $cart1->addProduct($product1);
