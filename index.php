@@ -2,6 +2,7 @@
 
 require_once __DIR__. '/product.php';
 require_once __DIR__. '/user.php';
+require_once __DIR__. '/guest.php';
 
 $prodotto1 = new product(
     'Monge',
@@ -33,8 +34,17 @@ $user1 = new user(
     'Via del quirinale 12',
     '3887203560'
 );
+
+$guest1 = new guest(
+    'Pierfrancesco',
+    'Botrugno',
+    'sickmadman@gmail.com',
+    'Via Brombeis 82',
+    '3925684333'
+);
   
 var_dump($prodotto1, $prodotto2, $prodotto3);
-var_dump($user1)
+var_dump($user1);
+var_dump($guest1);
 
 ?>

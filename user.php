@@ -1,20 +1,13 @@
 <?php 
 
-class user{
-    public $name;
-    public $surname;
-    public $email;
+require_once __DIR__. '/guest.php';
+
+class user extends guest{
     private $password;
-    public $address;
-    public $telephone;
 
     function __construct($_name, $_surname, $_email, $_password, $_address, $_telephone){
-        $this->name = $_name;
-        $this->surname = $_surname;
-        $this->email = $_email;
+        parent::__construct($_name, $_surname, $_email, $_address, $_telephone);
         $this->password = $_password;
-        $this->address = $_address;
-        $this->telephone = $_telephone;
     }
 }
 
