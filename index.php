@@ -3,22 +3,23 @@
 require_once __DIR__. '/product.php';
 require_once __DIR__. '/user.php';
 require_once __DIR__. '/guest.php';
+require_once __DIR__. '/cart.php';
 
-$prodotto1 = new product(
+$product1 = new product(
     'Monge',
     'Monge All Breeds Adult Salmone e Riso',
     'Cibo',
     'Crocchette per cani adulti con salmone e riso',
     45.90
 );
-$prodotto2 = new product(
+$product2 = new product(
     'Seresto',
     'Seresto Collare Antiparassitario per Cani',
     'Medicinali',
     'Collare antiparassitario per cani di grandi dimensioni',
     29.80
 );
-$prodotto3 = new product(
+$product3 = new product(
     'Disney',
     'Guinzaglio Disney Vader Star Wars',
     'Guinzaglieria',
@@ -42,9 +43,21 @@ $guest1 = new guest(
     'Via Brombeis 82',
     '3925684333'
 );
+
+$cart1 = new cart(
+    [],
+    '',
+    ''
+);
+
+$cart1->addProduct($product1);
+$cart1->addProduct($product2);
+$cart1->calcTot();
+$cart1->countProducts();
   
-var_dump($prodotto1, $prodotto2, $prodotto3);
+var_dump($product1, $product2, $product3);
 var_dump($user1);
 var_dump($guest1);
+var_dump($cart1);
 
 ?>

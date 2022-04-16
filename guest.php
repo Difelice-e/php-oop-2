@@ -14,6 +14,10 @@ class guest{
         $this->address = $_address;
         $this->telephone = $_telephone;
     }
+
+    public function getfullName(){
+        "{$this->name} {$this->surname}";
+    }
 }
 
 ?>
