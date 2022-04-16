@@ -6,9 +6,18 @@ class creditCard{
     private $cvv;
   
     function __construct($_cardNumber, $_expiration, $_cvv){
-      $this->cardNumber = $_cardNumber;
-      $this->expiration = $_expiration;
-      $this->cvv = $_cvv;
+        if(strlen($_cardNumber) == 16){
+            $this->cardNumber = $_cardNumber;
+        } else {
+            echo 'Wrong card number';
+        }
+      
+        if(strlen($_cvv) == 3){
+            $this->cvv = $_cvv;
+        } else {
+            echo 'Wrong cvv';
+        }
+        $this->expiration = $_expiration;
     }
   
     public function getNumero(){
@@ -21,6 +30,12 @@ class creditCard{
   
     public function getcvv(){
       return $this->cvv;
+    }
+
+    public function addCreditCard($cardNumber, $expiration, $cvv){
+        $this->cardNumber = $cardNumber;
+        $this->expiration = $expiration;
+        $this->cvv = $cvv;
     }
 }
 
